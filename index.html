@@ -14,159 +14,74 @@
 </head>
 <body>
   <header class="site-header">
-    <a class="brand" href="#top" aria-label="RoboGardener home">
-      <img src="assets/robogardener-logo.jpg" alt="RoboGardener logo" />
-    </a>
+    <a class="brand" href="#top" aria-label="RoboGardener home"><img src="assets/robogardener-logo.jpg" alt="RoboGardener logo" /></a>
     <nav class="main-nav" aria-label="Primary navigation">
       <a href="#services" data-i18n="nav.services">Services</a>
-      <a href="#why" data-i18n="nav.why">Why Us</a>
-      <a href="#how" data-i18n="nav.how">How It Works</a>
+      <a href="#technology" data-i18n="nav.technology">Robotic Mowing</a>
+      <a href="#why" data-i18n="nav.why">Why RoboGardener</a>
       <a href="#commercial" data-i18n="nav.commercial">Commercial</a>
-      <a href="#areas" data-i18n="nav.areas">Areas</a>
-      <a href="#quote" data-i18n="nav.quote">Get a Quote</a>
+      <a href="#areas" data-i18n="nav.areas">Service Areas</a>
     </nav>
     <div class="header-actions">
-      <div class="lang-switch" aria-label="Language switcher">
-        <button type="button" class="lang-btn active" data-lang="en">EN</button>
-        <button type="button" class="lang-btn" data-lang="zh">中文</button>
-      </div>
+      <div class="lang-switch" aria-label="Language switcher"><button type="button" class="lang-btn active" data-lang="en">EN</button><button type="button" class="lang-btn" data-lang="zh">中文</button></div>
       <a class="phone-link" href="tel:0408816502">0408 816 502</a>
       <a class="btn btn-dark header-cta" href="#quote" data-i18n="nav.cta">Get a Free Quote</a>
     </div>
   </header>
 
   <main id="top">
-    <section class="hero">
+    <section class="hero hero-premium">
       <div class="hero-visual">
-        <div class="hero-overlay"></div>
-        <div class="expert-card">
-          <img src="assets/dr-gardener-ip.jpg" alt="Dr Bill — RoboGardener" />
-          <div class="expert-badge">
-            <strong data-i18n="hero.phd">PhD in Horticulture</strong>
-            <span data-i18n="hero.exp">18 Years Lawn-Care Experience</span>
+        <div class="hero-copy">
+          <span class="eyebrow" data-i18n="hero.eyebrow">SMARTER LAWN CARE FOR MELBOURNE</span>
+          <h1 data-i18n-html="hero.title">A Better Lawn.<br><span>Smarter Mowing.</span><br>Professional Care.</h1>
+          <p data-i18n="hero.desc">Robotic mowing technology combined with professional lawn-care expertise for Melbourne homes and commercial properties.</p>
+          <div class="hero-actions">
+            <a class="btn btn-hero-primary" href="#quote" data-i18n="hero.cta1">Get a Free Lawn Assessment</a>
+            <a class="btn btn-hero-secondary" href="#services" data-i18n="hero.cta2">Explore Our Services</a>
+          </div>
+          <div class="hero-proof">
+            <span data-i18n="hero.proof1">✓ PhD-qualified horticultural expertise</span>
+            <span data-i18n="hero.proof2">✓ 18 years lawn-care experience</span>
+            <span data-i18n="hero.proof3">✓ Quiet, consistent robotic mowing</span>
           </div>
         </div>
-        <div class="hero-copy">
-          <span class="eyebrow" data-i18n="hero.eyebrow">SMART CARE • PERFECT LAWN</span>
-          <h1 data-i18n-html="hero.title">Smarter Lawn Care.<br><span>Powered by Robotics.</span><br>Perfected by Expertise.</h1>
-          <p data-i18n="hero.desc">Professional robotic lawn mowing and expert lawn care for Melbourne homes and businesses — quieter, more consistent and managed by an experienced gardener.</p>
-          <div class="hero-proof">
-            <span data-i18n="hero.proof1">✓ Smart robotic mowing</span>
-            <span data-i18n="hero.proof2">✓ Eco-friendly & low-noise</span>
-            <span data-i18n="hero.proof3">✓ Professional human oversight</span>
-          </div>
-          <p class="hero-signature" data-i18n="hero.signature">Science. Experience. Perfect Lawn.</p>
+        <div class="hero-trust-card">
+          <img src="assets/dr-gardener-ip.jpg" alt="Dr Bill — RoboGardener" />
+          <div><small data-i18n="hero.trust">PROFESSIONAL OVERSIGHT</small><strong data-i18n="hero.phd">Dr Bill · PhD in Horticulture</strong><span data-i18n="hero.exp">18 Years Lawn-Care Experience</span></div>
         </div>
       </div>
+    </section>
 
-      <aside class="quote-panel" id="quote">
-        <p class="quote-kicker" data-i18n="form.kicker">FREE LAWN ASSESSMENT</p>
-        <h2 data-i18n="form.title">Get Your Lawn-Care Quote</h2>
-        <p class="quote-intro" data-i18n="form.intro">Tell us about your lawn. We’ll review the property and contact you with a tailored quote.</p>
+    <section class="market-section" id="commercial">
+      <div class="market-heading">
+        <span class="eyebrow green" data-i18n="market.eyebrow">WHO WE SERVE</span>
+        <h2 data-i18n="market.title">Professional lawn care for homes and managed properties.</h2>
+      </div>
+      <div class="market-grid">
+        <article class="market-card">
+          <div class="market-icon">⌂</div>
+          <div><h3 data-i18n="market.res.title">Residential</h3><p data-i18n="market.res.desc">Reliable lawn care tailored to private homes and residential properties.</p><ul><li data-i18n="market.res.i1">Residential Homes</li><li data-i18n="market.res.i2">Larger Residential Properties</li><li data-i18n="market.res.i3">Private Retirement Residences</li></ul></div>
+        </article>
+        <article class="market-card">
+          <div class="market-icon">▦</div>
+          <div><h3 data-i18n="market.com.title">Commercial</h3><p data-i18n="market.com.desc">Scalable grounds care for organisations, shared properties and facilities.</p><ul><li data-i18n="market.com.i1">Commercial Properties</li><li data-i18n="market.com.i2">Strata & Body Corporate</li><li data-i18n="market.com.i3">Schools & Childcare</li><li data-i18n="market.com.i4">Retirement Living & Managed Communities</li><li data-i18n="market.com.i5">Offices & Facilities</li></ul></div>
+        </article>
+      </div>
+    </section>
 
-        <form id="quoteForm" novalidate>
-          <input type="hidden" name="preferred_language" id="preferredLanguage" value="English" />
-          <div class="hp-field" aria-hidden="true">
-            <label>Website <input type="text" name="website" tabindex="-1" autocomplete="off" /></label>
-          </div>
-
-          <div class="form-grid two">
-            <label><span data-i18n="form.name">Full Name *</span>
-              <input type="text" name="full_name" required maxlength="150" autocomplete="name" data-i18n-placeholder="form.namePh" placeholder="Your name" />
-            </label>
-            <label><span data-i18n="form.phone">Phone *</span>
-              <input type="tel" name="phone" required maxlength="50" autocomplete="tel" data-i18n-placeholder="form.phonePh" placeholder="04xx xxx xxx" />
-            </label>
-          </div>
-
-          <label><span data-i18n="form.email">Email *</span>
-            <input type="email" name="email" required maxlength="254" autocomplete="email" data-i18n-placeholder="form.emailPh" placeholder="you@example.com" />
-          </label>
-
-          <div class="form-grid address-grid">
-            <label><span data-i18n="form.address">Service Address *</span>
-              <input type="text" name="service_address" required maxlength="300" autocomplete="street-address" data-i18n-placeholder="form.addressPh" placeholder="Street address, suburb, VIC" />
-            </label>
-            <label><span data-i18n="form.postcode">Postcode *</span>
-              <input type="text" name="postcode" required inputmode="numeric" maxlength="4" autocomplete="postal-code" pattern="[0-9]{4}" placeholder="3109" />
-            </label>
-          </div>
-
-          <div class="form-grid two">
-            <label><span data-i18n="form.area">Approx. Lawn Area *</span>
-              <select name="lawn_area" id="lawnArea" required>
-                <option value="" data-i18n="area.select">Select lawn area</option>
-                <option value="0-100" data-i18n="area.a1">Under 100 m²</option>
-                <option value="100-250" data-i18n="area.a2">100–250 m²</option>
-                <option value="250-500" data-i18n="area.a3">250–500 m²</option>
-                <option value="500-1000" data-i18n="area.a4">500–1,000 m²</option>
-                <option value="1000-2000" data-i18n="area.a5">1,000–2,000 m²</option>
-                <option value="2000+" data-i18n="area.a6">2,000 m²+</option>
-                <option value="unknown" data-i18n="common.unsure">Not sure</option>
-              </select>
-            </label>
-            <label><span data-i18n="form.height">Current Grass Height *</span>
-              <select name="grass_height" id="grassHeight" required>
-                <option value="" data-i18n="height.select">Select grass height</option>
-                <option value="under5" data-i18n="height.h1">Under 5 cm</option>
-                <option value="5-10" data-i18n="height.h2">5–10 cm</option>
-                <option value="10-20" data-i18n="height.h3">10–20 cm</option>
-                <option value="20-40" data-i18n="height.h4">20–40 cm</option>
-                <option value="40plus" data-i18n="height.h5">40 cm+ / overgrown</option>
-                <option value="unknown" data-i18n="common.unsure">Not sure</option>
-              </select>
-            </label>
-          </div>
-
-          <label><span data-i18n="form.service">Service Required *</span>
-            <select name="service_required" required>
-              <option value="" data-i18n="service.select">Select service type</option>
-              <option value="Robotic Lawn Mowing" data-i18n="service.s1">Robotic lawn mowing</option>
-              <option value="Regular Lawn Maintenance" data-i18n="service.s2">Regular lawn maintenance</option>
-              <option value="Edge Trimming & Detail Work" data-i18n="service.s3">Edge trimming & detail work</option>
-              <option value="Lawn Health Management" data-i18n="service.s4">Lawn health management</option>
-              <option value="Custom Lawn Care Plan" data-i18n="service.s5">Custom lawn care plan</option>
-              <option value="Commercial Grounds Maintenance" data-i18n="service.s6">Commercial grounds maintenance</option>
-            </select>
-          </label>
-
-          <label><span data-i18n="form.info">Additional Information</span>
-            <textarea name="additional_information" rows="3" maxlength="3000" data-i18n-placeholder="form.infoPh" placeholder="Access, slope, pets, preferred timing, lawn condition, etc."></textarea>
-          </label>
-
-          <label class="photo-upload"><span data-i18n="form.photos">Upload Lawn Photo (optional)</span>
-            <input id="lawnPhoto" type="file" name="lawn_photo" accept="image/jpeg,image/png,image/webp,image/heic" />
-            <small id="photoHelp">JPG, PNG, WebP or HEIC · maximum 10 MB</small>
-          </label>
-
-          <div class="estimate" id="estimateBox" aria-live="polite">
-            <div>
-              <span class="estimate-label" data-i18n="estimate.label">Indicative starting estimate</span>
-              <strong id="estimatePrice" data-i18n="estimate.pending">Complete lawn details to see an estimate</strong>
-            </div>
-            <small data-i18n="estimate.note">Final pricing is confirmed after we review lawn condition, access, slope, service frequency and site requirements.</small>
-          </div>
-
-          <div class="turnstile-wrap">
-            <div id="turnstileWidget"></div>
-            <p id="securityStatus" class="security-note" aria-live="polite"></p>
-          </div>
-
-          <button id="quoteSubmit" class="btn btn-green btn-wide" type="submit">
-            <span id="submitLabel" data-i18n="form.submit">Get My Free Quote</span><span aria-hidden="true">→</span>
-          </button>
-          <p class="privacy-note" data-i18n="form.privacy">🔒 Your details are used only to assess and respond to your enquiry.</p>
-          <div id="formMessage" class="form-message" role="status" aria-live="polite"></div>
-        </form>
-
-        <div id="formSuccess" class="success-card" hidden tabindex="-1">
-          <div class="success-icon" aria-hidden="true">✓</div>
-          <h3 id="successTitle">Thank you — we’ve received your enquiry.</h3>
-          <p id="successText">RoboGardener will review your lawn details and contact you about the next step.</p>
-          <p id="successRef" class="success-ref"></p>
-          <button id="newEnquiry" class="btn btn-dark" type="button">Submit another enquiry</button>
-        </div>
-      </aside>
+    <section class="section technology" id="technology">
+      <div class="section-heading compact">
+        <span class="eyebrow green" data-i18n="tech.eyebrow">TECHNOLOGY BEHIND OUR LAWN CARE</span>
+        <h2 data-i18n="tech.title">The right robotic tool for the right lawn.</h2>
+        <p data-i18n="tech.intro">RoboGardener uses a range of robotic mowing tools alongside professional human oversight. Equipment is selected to suit the lawn, terrain, access and service requirements.</p>
+      </div>
+      <div class="technology-grid">
+        <article class="technology-card"><div class="machine-image"><img src="assets/mowrator-2wd.webp" alt="Mowrator 2WD robotic mower" /></div><div class="machine-copy"><span data-i18n="tech.tool">PROFESSIONAL TOOL</span><h3>Mowrator 2WD</h3><p data-i18n="tech.m1">A controlled robotic mowing option for residential lawns, regular terrain and areas where precise operator control is useful.</p></div></article>
+        <article class="technology-card"><div class="machine-image"><img src="assets/mowrator-4wd.webp" alt="Mowrator 4WD robotic mower" /></div><div class="machine-copy"><span data-i18n="tech.tool">PROFESSIONAL TOOL</span><h3>Mowrator 4WD</h3><p data-i18n="tech.m2">A more capable platform for challenging terrain, larger lawns and sites requiring additional traction and control.</p></div></article>
+        <article class="technology-card"><div class="machine-image"><img src="assets/terramow-v1000.webp" alt="TerraMow V1000 autonomous robotic mower" /></div><div class="machine-copy"><span data-i18n="tech.tool">PROFESSIONAL TOOL</span><h3>TerraMow V1000</h3><p data-i18n="tech.m3">An autonomous mowing option suited to regular ongoing maintenance where consistent robotic mowing is appropriate.</p></div></article>
+      </div>
+      <p class="technology-note" data-i18n="tech.note">Equipment shown represents tools available within our lawn-care approach. RoboGardener assesses each property before recommending a service method.</p>
     </section>
 
     <section class="steps" id="how">
@@ -176,11 +91,7 @@
     </section>
 
     <section class="section why" id="why">
-      <div class="section-heading">
-        <span class="eyebrow green" data-i18n="why.eyebrow">WHY CHOOSE ROBOGARDENER?</span>
-        <h2 data-i18n-html="why.title">Technology + expertise =<br>the perfect lawn.</h2>
-        <p data-i18n="why.intro">A smarter lawn-care service combining robotic mowing technology with Dr Bill’s horticultural knowledge and long-term lawn-care experience.</p>
-      </div>
+      <div class="section-heading"><span class="eyebrow green" data-i18n="why.eyebrow">WHY CHOOSE ROBOGARDENER?</span><h2 data-i18n-html="why.title">Technology + expertise =<br>the perfect lawn.</h2><p data-i18n="why.intro">A smarter lawn-care service combining robotic mowing technology with Dr Bill’s horticultural knowledge and long-term lawn-care experience.</p></div>
       <div class="credential-grid">
         <article class="credential"><span>1</span><div><h3 id="safeClaim1">Technology-led robotic mowing</h3><p>A modern service approach designed to make routine mowing quieter, more consistent and easier to manage.</p></div></article>
         <article class="credential"><span>2</span><div><h3 id="safeClaim2">PhD-qualified horticultural expertise</h3><p>Science-led lawn care, practical horticultural knowledge and site-specific recommendations.</p></div></article>
@@ -189,10 +100,7 @@
     </section>
 
     <section class="section services" id="services">
-      <div class="section-heading compact">
-        <span class="eyebrow green" data-i18n="services.eyebrow">OUR SERVICES</span>
-        <h2 data-i18n="services.title">Smart care for a healthier, better-looking lawn.</h2>
-      </div>
+      <div class="section-heading compact"><span class="eyebrow green" data-i18n="services.eyebrow">OUR SERVICES</span><h2 data-i18n="services.title">Smart care for a healthier, better-looking lawn.</h2></div>
       <div class="service-grid">
         <article><div class="icon">🤖</div><h3 data-i18n="services.s1t">Robotic Lawn Mowing</h3><p data-i18n="services.s1d">Automatic, efficient and precise mowing using professional robotic technology.</p></article>
         <article><div class="icon">📅</div><h3 data-i18n="services.s2t">Regular Lawn Maintenance</h3><p data-i18n="services.s2d">Scheduled mowing and lawn care to keep presentation consistent throughout the season.</p></article>
@@ -203,50 +111,36 @@
       </div>
     </section>
 
-    <section class="section commercial" id="commercial">
-      <div>
-        <span class="eyebrow" data-i18n="commercial.eyebrow">RESIDENTIAL + COMMERCIAL</span>
-        <h2 data-i18n="commercial.title">Technology makes mowing smarter. Professional care makes lawns better.</h2>
-        <p data-i18n="commercial.desc">For homes, larger properties, strata and body corporate sites, schools, childcare, retirement living, offices and facilities. We assess the lawn and recommend the right service approach.</p>
-        <a href="#quote" class="btn btn-light" data-i18n="commercial.cta">Request a Site Assessment</a>
-      </div>
-      <div class="commercial-list">
-        <span data-i18n="commercial.i1">Residential homes</span><span data-i18n="commercial.i2">Commercial properties</span>
-        <span data-i18n="commercial.i3">Strata & body corporate</span><span data-i18n="commercial.i4">Schools & childcare</span>
-        <span data-i18n="commercial.i5">Retirement living</span><span data-i18n="commercial.i6">Offices & facilities</span>
-      </div>
-    </section>
-
     <section class="section founder">
       <div class="founder-image"><img src="assets/dr-gardener-ip.jpg" alt="Dr Bill RoboGardener" /></div>
-      <div class="founder-copy">
-        <span class="eyebrow green" data-i18n="founder.eyebrow">MEET DR BILL</span>
-        <h2 data-i18n="founder.title">Science. Experience. Perfect Lawn.</h2>
-        <p data-i18n="founder.p1">RoboGardener combines horticultural knowledge with modern robotic mowing technology. The goal is simple: healthier lawns, less disruption and a more reliable maintenance experience.</p>
-        <div class="founder-facts">
-          <span data-i18n="founder.f1">PhD in Horticulture</span><span data-i18n="founder.f2">18 years lawn-care experience</span><span data-i18n="founder.f3">Melbourne-based service</span>
-        </div>
-      </div>
+      <div class="founder-copy"><span class="eyebrow green" data-i18n="founder.eyebrow">MEET DR BILL</span><h2 data-i18n="founder.title">Science. Experience. Perfect Lawn.</h2><p data-i18n="founder.p1">RoboGardener combines horticultural knowledge with modern robotic mowing technology. The goal is simple: healthier lawns, less disruption and a more reliable maintenance experience.</p><div class="founder-facts"><span data-i18n="founder.f1">PhD in Horticulture</span><span data-i18n="founder.f2">18 years lawn-care experience</span><span data-i18n="founder.f3">Melbourne-based service</span></div></div>
     </section>
 
-    <section class="section areas" id="areas">
-      <div class="section-heading compact">
-        <span class="eyebrow green" data-i18n="areas.eyebrow">SERVICE AREA</span>
-        <h2 data-i18n="areas.title">Servicing Melbourne & surrounding areas</h2>
-        <p data-i18n="areas.desc">Send us your postcode, lawn area and current grass height. We’ll confirm availability and prepare a suitable quote.</p>
-      </div>
-      <a href="#quote" class="btn btn-dark" data-i18n="areas.cta">Check My Area</a>
+    <section class="section quote-section" id="quote">
+      <aside class="quote-panel">
+        <p class="quote-kicker" data-i18n="form.kicker">FREE LAWN ASSESSMENT</p><h2 data-i18n="form.title">Get Your Lawn-Care Quote</h2><p class="quote-intro" data-i18n="form.intro">Tell us about your lawn. We’ll review the property and contact you with a tailored quote.</p>
+        <form id="quoteForm" novalidate>
+          <input type="hidden" name="preferred_language" id="preferredLanguage" value="English" />
+          <div class="hp-field" aria-hidden="true"><label>Website <input type="text" name="website" tabindex="-1" autocomplete="off" /></label></div>
+          <div class="form-grid two"><label><span data-i18n="form.name">Full Name *</span><input type="text" name="full_name" required maxlength="150" autocomplete="name" data-i18n-placeholder="form.namePh" placeholder="Your name" /></label><label><span data-i18n="form.phone">Phone *</span><input type="tel" name="phone" required maxlength="50" autocomplete="tel" data-i18n-placeholder="form.phonePh" placeholder="04xx xxx xxx" /></label></div>
+          <label><span data-i18n="form.email">Email *</span><input type="email" name="email" required maxlength="254" autocomplete="email" data-i18n-placeholder="form.emailPh" placeholder="you@example.com" /></label>
+          <div class="form-grid address-grid"><label><span data-i18n="form.address">Service Address *</span><input type="text" name="service_address" required maxlength="300" autocomplete="street-address" data-i18n-placeholder="form.addressPh" placeholder="Street address, suburb, VIC" /></label><label><span data-i18n="form.postcode">Postcode *</span><input type="text" name="postcode" required inputmode="numeric" maxlength="4" autocomplete="postal-code" pattern="[0-9]{4}" placeholder="3109" /></label></div>
+          <div class="form-grid two"><label><span data-i18n="form.area">Approx. Lawn Area *</span><select name="lawn_area" id="lawnArea" required><option value="" data-i18n="area.select">Select lawn area</option><option value="0-100" data-i18n="area.a1">Under 100 m²</option><option value="100-250" data-i18n="area.a2">100–250 m²</option><option value="250-500" data-i18n="area.a3">250–500 m²</option><option value="500-1000" data-i18n="area.a4">500–1,000 m²</option><option value="1000-2000" data-i18n="area.a5">1,000–2,000 m²</option><option value="2000+" data-i18n="area.a6">2,000 m²+</option><option value="unknown" data-i18n="common.unsure">Not sure</option></select></label><label><span data-i18n="form.height">Current Grass Height *</span><select name="grass_height" id="grassHeight" required><option value="" data-i18n="height.select">Select grass height</option><option value="under5" data-i18n="height.h1">Under 5 cm</option><option value="5-10" data-i18n="height.h2">5–10 cm</option><option value="10-20" data-i18n="height.h3">10–20 cm</option><option value="20-40" data-i18n="height.h4">20–40 cm</option><option value="40plus" data-i18n="height.h5">40 cm+ / overgrown</option><option value="unknown" data-i18n="common.unsure">Not sure</option></select></label></div>
+          <label><span data-i18n="form.service">Service Required *</span><select name="service_required" required><option value="" data-i18n="service.select">Select service type</option><option value="Robotic Lawn Mowing" data-i18n="service.s1">Robotic lawn mowing</option><option value="Regular Lawn Maintenance" data-i18n="service.s2">Regular lawn maintenance</option><option value="Edge Trimming & Detail Work" data-i18n="service.s3">Edge trimming & detail work</option><option value="Lawn Health Management" data-i18n="service.s4">Lawn health management</option><option value="Custom Lawn Care Plan" data-i18n="service.s5">Custom lawn care plan</option><option value="Commercial Grounds Maintenance" data-i18n="service.s6">Commercial grounds maintenance</option></select></label>
+          <label><span data-i18n="form.info">Additional Information</span><textarea name="additional_information" rows="3" maxlength="3000" data-i18n-placeholder="form.infoPh" placeholder="Access, slope, pets, preferred timing, lawn condition, etc."></textarea></label>
+          <label class="photo-upload"><span data-i18n="form.photos">Upload Lawn Photo (optional)</span><input id="lawnPhoto" type="file" name="lawn_photo" accept="image/jpeg,image/png,image/webp,image/heic" /><small id="photoHelp">JPG, PNG, WebP or HEIC · maximum 10 MB</small></label>
+          <div class="estimate" id="estimateBox" aria-live="polite"><div><span class="estimate-label" data-i18n="estimate.label">Indicative starting estimate</span><strong id="estimatePrice" data-i18n="estimate.pending">Complete lawn details to see an estimate</strong></div><small data-i18n="estimate.note">Final pricing is confirmed after we review lawn condition, access, slope, service frequency and site requirements.</small></div>
+          <div class="turnstile-wrap"><div id="turnstileWidget"></div><p id="securityStatus" class="security-note" aria-live="polite"></p></div>
+          <button id="quoteSubmit" class="btn btn-green btn-wide" type="submit"><span id="submitLabel" data-i18n="form.submit">Get My Free Quote</span><span aria-hidden="true">→</span></button><p class="privacy-note" data-i18n="form.privacy">🔒 Your details are used only to assess and respond to your enquiry.</p><div id="formMessage" class="form-message" role="status" aria-live="polite"></div>
+        </form>
+        <div id="formSuccess" class="success-card" hidden tabindex="-1"><div class="success-icon" aria-hidden="true">✓</div><h3 id="successTitle">Thank you — we’ve received your enquiry.</h3><p id="successText">RoboGardener will review your lawn details and contact you about the next step.</p><p id="successRef" class="success-ref"></p><button id="newEnquiry" class="btn btn-dark" type="button">Submit another enquiry</button></div>
+      </aside>
     </section>
+
+    <section class="section areas" id="areas"><div class="section-heading compact"><span class="eyebrow green" data-i18n="areas.eyebrow">SERVICE AREA</span><h2 data-i18n="areas.title">Servicing Melbourne & surrounding areas</h2><p data-i18n="areas.desc">Send us your postcode, lawn area and current grass height. We’ll confirm availability and prepare a suitable quote.</p></div><a href="#quote" class="btn btn-dark" data-i18n="areas.cta">Check My Area</a></section>
   </main>
 
-  <footer>
-    <div class="footer-brand"><img src="assets/robogardener-logo.jpg" alt="RoboGardener" /><p data-i18n="footer.tagline">Smart Lawn Care. A Greener Tomorrow.</p></div>
-    <div><h4 data-i18n="footer.company">Company</h4><p>Youwin Investments Group Pty Ltd</p><p>ABN 58 673 241 257</p></div>
-    <div><h4 data-i18n="footer.contact">Contact</h4><p>Dr Bill</p><a href="tel:0408816502">0408 816 502</a><a href="mailto:enquiries@robogardener.com.au">enquiries@robogardener.com.au</a></div>
-    <div><h4 data-i18n="footer.service">Service</h4><p data-i18n="footer.melbourne">Melbourne, Victoria</p><a href="#quote" data-i18n="footer.quote">Get a Free Quote</a></div>
-  </footer>
-
-  <script src="script.js"></script>
-  <script src="integration.js"></script>
+  <footer><div class="footer-brand"><img src="assets/robogardener-logo.jpg" alt="RoboGardener" /><p data-i18n="footer.tagline">Smart Lawn Care. A Greener Tomorrow.</p></div><div><h4 data-i18n="footer.company">Company</h4><p>Youwin Investments Group Pty Ltd</p><p>ABN 58 673 241 257</p></div><div><h4 data-i18n="footer.contact">Contact</h4><p>Dr Bill</p><a href="tel:0408816502">0408 816 502</a><a href="mailto:enquiries@robogardener.com.au">enquiries@robogardener.com.au</a></div><div><h4 data-i18n="footer.service">Service</h4><p data-i18n="footer.melbourne">Melbourne, Victoria</p><a href="#quote" data-i18n="footer.quote">Get a Free Quote</a></div></footer>
+  <script src="script.js"></script><script src="integration.js"></script>
 </body>
 </html>
