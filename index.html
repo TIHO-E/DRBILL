@@ -9,6 +9,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=DM+Serif+Display&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="enhancements.css" />
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit" async defer></script>
 </head>
 <body>
   <header class="site-header">
@@ -62,38 +64,37 @@
         <h2 data-i18n="form.title">Get Your Lawn-Care Quote</h2>
         <p class="quote-intro" data-i18n="form.intro">Tell us about your lawn. We’ll review the property and contact you with a tailored quote.</p>
 
-        <form id="quoteForm" action="https://formsubmit.co/drbillpei@gmail.com" method="POST" enctype="multipart/form-data">
-          <input type="hidden" name="_subject" value="New RoboGardener Quote Enquiry" />
-          <input type="hidden" name="_template" value="table" />
-          <input type="hidden" name="_captcha" value="false" />
-          <input type="hidden" name="Preferred Language" id="preferredLanguage" value="English" />
-          <input type="text" name="_honey" class="hide" tabindex="-1" autocomplete="off" />
+        <form id="quoteForm" novalidate>
+          <input type="hidden" name="preferred_language" id="preferredLanguage" value="English" />
+          <div class="hp-field" aria-hidden="true">
+            <label>Website <input type="text" name="website" tabindex="-1" autocomplete="off" /></label>
+          </div>
 
           <div class="form-grid two">
             <label><span data-i18n="form.name">Full Name *</span>
-              <input type="text" name="Full Name" required data-i18n-placeholder="form.namePh" placeholder="Your name" />
+              <input type="text" name="full_name" required maxlength="150" autocomplete="name" data-i18n-placeholder="form.namePh" placeholder="Your name" />
             </label>
             <label><span data-i18n="form.phone">Phone *</span>
-              <input type="tel" name="Phone" required data-i18n-placeholder="form.phonePh" placeholder="04xx xxx xxx" />
+              <input type="tel" name="phone" required maxlength="50" autocomplete="tel" data-i18n-placeholder="form.phonePh" placeholder="04xx xxx xxx" />
             </label>
           </div>
 
           <label><span data-i18n="form.email">Email *</span>
-            <input type="email" name="Email" required data-i18n-placeholder="form.emailPh" placeholder="you@example.com" />
+            <input type="email" name="email" required maxlength="254" autocomplete="email" data-i18n-placeholder="form.emailPh" placeholder="you@example.com" />
           </label>
 
           <div class="form-grid address-grid">
             <label><span data-i18n="form.address">Service Address *</span>
-              <input type="text" name="Service Address" required data-i18n-placeholder="form.addressPh" placeholder="Street address, suburb, VIC" />
+              <input type="text" name="service_address" required maxlength="300" autocomplete="street-address" data-i18n-placeholder="form.addressPh" placeholder="Street address, suburb, VIC" />
             </label>
             <label><span data-i18n="form.postcode">Postcode *</span>
-              <input type="text" name="Postcode" required inputmode="numeric" maxlength="4" placeholder="3109" />
+              <input type="text" name="postcode" required inputmode="numeric" maxlength="4" autocomplete="postal-code" pattern="[0-9]{4}" placeholder="3109" />
             </label>
           </div>
 
           <div class="form-grid two">
             <label><span data-i18n="form.area">Approx. Lawn Area *</span>
-              <select name="Approx Lawn Area" id="lawnArea" required>
+              <select name="lawn_area" id="lawnArea" required>
                 <option value="" data-i18n="area.select">Select lawn area</option>
                 <option value="0-100" data-i18n="area.a1">Under 100 m²</option>
                 <option value="100-250" data-i18n="area.a2">100–250 m²</option>
@@ -105,7 +106,7 @@
               </select>
             </label>
             <label><span data-i18n="form.height">Current Grass Height *</span>
-              <select name="Current Grass Height" id="grassHeight" required>
+              <select name="grass_height" id="grassHeight" required>
                 <option value="" data-i18n="height.select">Select grass height</option>
                 <option value="under5" data-i18n="height.h1">Under 5 cm</option>
                 <option value="5-10" data-i18n="height.h2">5–10 cm</option>
@@ -118,7 +119,7 @@
           </div>
 
           <label><span data-i18n="form.service">Service Required *</span>
-            <select name="Service Required" required>
+            <select name="service_required" required>
               <option value="" data-i18n="service.select">Select service type</option>
               <option value="Robotic Lawn Mowing" data-i18n="service.s1">Robotic lawn mowing</option>
               <option value="Regular Lawn Maintenance" data-i18n="service.s2">Regular lawn maintenance</option>
@@ -130,11 +131,12 @@
           </label>
 
           <label><span data-i18n="form.info">Additional Information</span>
-            <textarea name="Additional Information" rows="3" data-i18n-placeholder="form.infoPh" placeholder="Access, slope, pets, preferred timing, lawn condition, etc."></textarea>
+            <textarea name="additional_information" rows="3" maxlength="3000" data-i18n-placeholder="form.infoPh" placeholder="Access, slope, pets, preferred timing, lawn condition, etc."></textarea>
           </label>
 
-          <label><span data-i18n="form.photos">Upload Lawn Photos (optional)</span>
-            <input type="file" name="attachment" accept="image/*" />
+          <label class="photo-upload"><span data-i18n="form.photos">Upload Lawn Photo (optional)</span>
+            <input id="lawnPhoto" type="file" name="lawn_photo" accept="image/jpeg,image/png,image/webp,image/heic" />
+            <small id="photoHelp">JPG, PNG, WebP or HEIC · maximum 10 MB</small>
           </label>
 
           <div class="estimate" id="estimateBox" aria-live="polite">
@@ -145,9 +147,25 @@
             <small data-i18n="estimate.note">Final pricing is confirmed after we review lawn condition, access, slope, service frequency and site requirements.</small>
           </div>
 
-          <button class="btn btn-green btn-wide" type="submit"><span data-i18n="form.submit">Get My Free Quote</span> <span>→</span></button>
+          <div class="turnstile-wrap">
+            <div id="turnstileWidget"></div>
+            <p id="securityStatus" class="security-note" aria-live="polite"></p>
+          </div>
+
+          <button id="quoteSubmit" class="btn btn-green btn-wide" type="submit">
+            <span id="submitLabel" data-i18n="form.submit">Get My Free Quote</span><span aria-hidden="true">→</span>
+          </button>
           <p class="privacy-note" data-i18n="form.privacy">🔒 Your details are used only to assess and respond to your enquiry.</p>
+          <div id="formMessage" class="form-message" role="status" aria-live="polite"></div>
         </form>
+
+        <div id="formSuccess" class="success-card" hidden tabindex="-1">
+          <div class="success-icon" aria-hidden="true">✓</div>
+          <h3 id="successTitle">Thank you — we’ve received your enquiry.</h3>
+          <p id="successText">RoboGardener will review your lawn details and contact you about the next step.</p>
+          <p id="successRef" class="success-ref"></p>
+          <button id="newEnquiry" class="btn btn-dark" type="button">Submit another enquiry</button>
+        </div>
       </aside>
     </section>
 
@@ -164,9 +182,9 @@
         <p data-i18n="why.intro">A smarter lawn-care service combining robotic mowing technology with Dr Bill’s horticultural knowledge and long-term lawn-care experience.</p>
       </div>
       <div class="credential-grid">
-        <article class="credential"><span>1</span><div><h3 data-i18n="why.c1t">Australia’s first lawn-mowing service company using robotic mowers</h3><p data-i18n="why.c1d">A technology-led approach designed to make routine mowing quieter, more consistent and easier to manage.</p></div></article>
-        <article class="credential"><span>2</span><div><h3 data-i18n="why.c2t">Australia’s first gardener with a PhD degree</h3><p data-i18n="why.c2d">Science-led lawn care, practical horticultural knowledge and site-specific recommendations.</p></div></article>
-        <article class="credential"><span>3</span><div><h3 data-i18n="why.c3t">18 years of lawn-mowing experience</h3><p data-i18n="why.c3d">Professional, reliable and focused on long-term lawn presentation and health.</p></div></article>
+        <article class="credential"><span>1</span><div><h3 id="safeClaim1">Technology-led robotic mowing</h3><p>A modern service approach designed to make routine mowing quieter, more consistent and easier to manage.</p></div></article>
+        <article class="credential"><span>2</span><div><h3 id="safeClaim2">PhD-qualified horticultural expertise</h3><p>Science-led lawn care, practical horticultural knowledge and site-specific recommendations.</p></div></article>
+        <article class="credential"><span>3</span><div><h3 id="safeClaim3">18 years of lawn-mowing experience</h3><p>Professional, reliable and focused on long-term lawn presentation and health.</p></div></article>
       </div>
     </section>
 
@@ -193,12 +211,9 @@
         <a href="#quote" class="btn btn-light" data-i18n="commercial.cta">Request a Site Assessment</a>
       </div>
       <div class="commercial-list">
-        <span data-i18n="commercial.i1">Residential homes</span>
-        <span data-i18n="commercial.i2">Commercial properties</span>
-        <span data-i18n="commercial.i3">Strata & body corporate</span>
-        <span data-i18n="commercial.i4">Schools & childcare</span>
-        <span data-i18n="commercial.i5">Retirement living</span>
-        <span data-i18n="commercial.i6">Offices & facilities</span>
+        <span data-i18n="commercial.i1">Residential homes</span><span data-i18n="commercial.i2">Commercial properties</span>
+        <span data-i18n="commercial.i3">Strata & body corporate</span><span data-i18n="commercial.i4">Schools & childcare</span>
+        <span data-i18n="commercial.i5">Retirement living</span><span data-i18n="commercial.i6">Offices & facilities</span>
       </div>
     </section>
 
@@ -209,9 +224,7 @@
         <h2 data-i18n="founder.title">Science. Experience. Perfect Lawn.</h2>
         <p data-i18n="founder.p1">RoboGardener combines horticultural knowledge with modern robotic mowing technology. The goal is simple: healthier lawns, less disruption and a more reliable maintenance experience.</p>
         <div class="founder-facts">
-          <span data-i18n="founder.f1">PhD in Horticulture</span>
-          <span data-i18n="founder.f2">18 years lawn-care experience</span>
-          <span data-i18n="founder.f3">Melbourne-based service</span>
+          <span data-i18n="founder.f1">PhD in Horticulture</span><span data-i18n="founder.f2">18 years lawn-care experience</span><span data-i18n="founder.f3">Melbourne-based service</span>
         </div>
       </div>
     </section>
@@ -227,28 +240,13 @@
   </main>
 
   <footer>
-    <div class="footer-brand">
-      <img src="assets/robogardener-logo.jpg" alt="RoboGardener" />
-      <p data-i18n="footer.tagline">Smart Lawn Care. A Greener Tomorrow.</p>
-    </div>
-    <div>
-      <h4 data-i18n="footer.company">Company</h4>
-      <p>Youwin Investments Group Pty Ltd</p>
-      <p>ABN 58 673 241 257</p>
-    </div>
-    <div>
-      <h4 data-i18n="footer.contact">Contact</h4>
-      <p>Dr Bill</p>
-      <a href="tel:0408816502">0408 816 502</a>
-      <a href="mailto:drbillpei@gmail.com">drbillpei@gmail.com</a>
-    </div>
-    <div>
-      <h4 data-i18n="footer.service">Service</h4>
-      <p data-i18n="footer.melbourne">Melbourne, Victoria</p>
-      <a href="#quote" data-i18n="footer.quote">Get a Free Quote</a>
-    </div>
+    <div class="footer-brand"><img src="assets/robogardener-logo.jpg" alt="RoboGardener" /><p data-i18n="footer.tagline">Smart Lawn Care. A Greener Tomorrow.</p></div>
+    <div><h4 data-i18n="footer.company">Company</h4><p>Youwin Investments Group Pty Ltd</p><p>ABN 58 673 241 257</p></div>
+    <div><h4 data-i18n="footer.contact">Contact</h4><p>Dr Bill</p><a href="tel:0408816502">0408 816 502</a><a href="mailto:enquiries@robogardener.com.au">enquiries@robogardener.com.au</a></div>
+    <div><h4 data-i18n="footer.service">Service</h4><p data-i18n="footer.melbourne">Melbourne, Victoria</p><a href="#quote" data-i18n="footer.quote">Get a Free Quote</a></div>
   </footer>
 
   <script src="script.js"></script>
+  <script src="integration.js"></script>
 </body>
 </html>
