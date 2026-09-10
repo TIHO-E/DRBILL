@@ -3,7 +3,7 @@
   // Public Cloudflare Turnstile site key. Safe to expose in frontend code.
   const TURNSTILE_SITE_KEY='0x4AAAAAAEu7h40kgxNIk3hf';
   const MAX_FILE_SIZE=10*1024*1024;
-  const ALLOWED_TYPES=['image/jpeg','image/png','image/webp','image/heic'];
+  const ALLOWED_TYPES=['image/jpeg','image/png','image/webp','image/heic','image/heif'];
 
   const form=document.getElementById('quoteForm');
   if(!form) return;
@@ -36,7 +36,7 @@
     const file=photo.files&&photo.files[0];
     if(!file) return true;
     if(file.size>MAX_FILE_SIZE){setMessage(isChinese()?'照片不能超过 10 MB。':'The lawn photo must be 10 MB or smaller.');photo.value='';return false;}
-    if(file.type&&!ALLOWED_TYPES.includes(file.type)){setMessage(isChinese()?'请上传 JPG、PNG、WebP 或 HEIC 图片。':'Please upload a JPG, PNG, WebP or HEIC image.');photo.value='';return false;}
+    if(file.type&&!ALLOWED_TYPES.includes(file.type)){setMessage(isChinese()?'请上传 JPG、PNG、WebP、HEIC 或 HEIF 图片。':'Please upload a JPG, PNG, WebP, HEIC or HEIF image.');photo.value='';return false;}
     setMessage('');return true;
   }
   photo.addEventListener('change',validatePhoto);
