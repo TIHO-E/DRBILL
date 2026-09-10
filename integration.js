@@ -3,7 +3,7 @@
   // Public Cloudflare Turnstile site key. Safe to expose in frontend code.
   const TURNSTILE_SITE_KEY='0x4AAAAAAEu7h40kgxNIk3hf';
   const MAX_FILE_SIZE=10*1024*1024;
-  const ALLOWED_TYPES=['image/jpeg','image/png','image/webp','image/heic','image/heif'];
+  const ALLOWED_TYPES=['image/jpeg','image/png','image/webp','image/heic'];
 
   const form=document.getElementById('quoteForm');
   if(!form) return;
