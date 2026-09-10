@@ -1,8 +1,7 @@
 (function(){
   const FUNCTION_URL='https://fzuqhjxzczlyinilstkd.supabase.co/functions/v1/submit-enquiry';
-  // Paste the Cloudflare Turnstile PUBLIC site key here after the widget is created.
-  // Never put the Turnstile secret key in this file.
-  const TURNSTILE_SITE_KEY='';
+  // Public Cloudflare Turnstile site key. Safe to expose in frontend code.
+  const TURNSTILE_SITE_KEY='0x4AAAAAAEu7h40kgxNIk3hf';
   const MAX_FILE_SIZE=10*1024*1024;
   const ALLOWED_TYPES=['image/jpeg','image/png','image/webp','image/heic','image/heif'];
 
@@ -43,10 +42,6 @@
   photo.addEventListener('change',validatePhoto);
 
   function renderTurnstile(){
-    if(!TURNSTILE_SITE_KEY){
-      securityStatus.textContent=isChinese()?'安全验证将在正式发布前启用。':'Security verification will be enabled before launch.';
-      return;
-    }
     if(!window.turnstile){setTimeout(renderTurnstile,250);return;}
     if(turnstileId!==null) return;
     turnstileId=window.turnstile.render('#turnstileWidget',{
@@ -66,10 +61,10 @@
     if(!form.checkValidity()){form.reportValidity();return;}
     if(form.elements.website&&form.elements.website.value) return;
     if(!validatePhoto()) return;
-    if(TURNSTILE_SITE_KEY&&!turnstileToken){setMessage(isChinese()?'请先完成安全验证。':'Please complete the security check.');return;}
+    if(!turnstileToken){setMessage(isChinese()?'请先完成安全验证。':'Please complete the security check.');return;}
 
     const fd=new FormData(form);
-    if(turnstileToken) fd.set('cf_turnstile_response',turnstileToken);
+    fd.set('cf_turnstile_response',turnstileToken);
     setLoading(true);
     try{
       const response=await fetch(FUNCTION_URL,{method:'POST',body:fd,headers:{'Accept':'application/json'}});
