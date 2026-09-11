@@ -471,3 +471,30 @@ img{height:auto}
   *,*::before,*::after{scroll-behavior:auto!important;transition:none!important;animation:none!important}
 }
 
+
+/* ===== Quote final alignment / artwork correction ===== */
+.quote-section{
+  background-color:#075a36;
+  background-image:url("assets/Background-Quote.png");
+  background-position:center center;
+  background-size:cover;
+  background-repeat:no-repeat;
+}
+.quote-section .quote-panel{
+  margin-left:auto;
+  margin-right:auto;
+}
+@media(min-width:1181px){
+  .quote-section .quote-panel{
+    width:min(760px,62vw);
+    margin-left:0;
+    margin-right:auto;
+  }
+  .quote-message{
+    top:50%;
+    transform:translateY(-50%);
+  }
+}
+@media(max-width:1180px){
+  .quote-message{transform:none}
+}
