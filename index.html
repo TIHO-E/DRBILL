@@ -16,7 +16,8 @@
 <body>
   <header class="site-header">
     <a class="brand" href="#top" aria-label="RoboGardener home"><img src="assets/robogardener-logo.jpg" alt="RoboGardener logo" /></a>
-    <nav class="main-nav" aria-label="Primary navigation">
+    <button class="mobile-menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="primaryNav"><span></span><span></span><span></span></button>
+    <nav class="main-nav" id="primaryNav" aria-label="Primary navigation">
       <a href="#services" data-i18n="nav.services">Services</a>
       <a href="#technology" data-i18n="nav.technology">Robotic Mowing</a>
       <a href="#why" data-i18n="nav.why">Why RoboGardener</a>
@@ -41,10 +42,10 @@
             <a class="btn btn-hero-primary" href="#quote" data-i18n="hero.cta1">Get a Free Lawn Assessment</a>
             <a class="btn btn-hero-secondary" href="#services" data-i18n="hero.cta2">Explore Our Services</a>
           </div>
-          <div class="hero-proof">
-            <span data-i18n="hero.proof1">✓ PhD-qualified horticultural expertise</span>
-            <span data-i18n="hero.proof2">✓ 18 years lawn-care experience</span>
-            <span data-i18n="hero.proof3">✓ Quiet, consistent robotic mowing</span>
+          <div class="hero-proof hero-trust-line">
+            <span data-i18n="hero.proof1">PhD-qualified horticultural expertise</span>
+            <span data-i18n="hero.proof2">18 years lawn-care experience</span>
+            <span data-i18n="hero.proof3">Quiet, consistent robotic mowing</span>
           </div>
         </div>
         <div class="hero-trust-card">
@@ -77,9 +78,9 @@
         <p data-i18n="tech.intro">RoboGardener uses a range of robotic mowing tools alongside professional human oversight. Equipment is selected to suit the lawn, terrain, access and service requirements.</p>
       </div>
       <div class="technology-grid">
-        <article class="technology-card"><div class="machine-image"><img src="assets/assets-mowrator-2wd.webp" alt="Mowrator 2WD robotic mower" /></div><div class="machine-copy"><span data-i18n="tech.tool">PROFESSIONAL TOOL</span><h3>Mowrator 2WD</h3><p data-i18n="tech.m1">A controlled robotic mowing option for residential lawns, regular terrain and areas where precise operator control is useful.</p></div></article>
-        <article class="technology-card"><div class="machine-image"><img src="assets/assets-mowrator-4wd.webp" alt="Mowrator 4WD robotic mower" /></div><div class="machine-copy"><span data-i18n="tech.tool">PROFESSIONAL TOOL</span><h3>Mowrator 4WD</h3><p data-i18n="tech.m2">A more capable platform for challenging terrain, larger lawns and sites requiring additional traction and control.</p></div></article>
-        <article class="technology-card"><div class="machine-image"><img src="assets/assets-terramow-v1000.webp" alt="TerraMow V1000 autonomous robotic mower" /></div><div class="machine-copy"><span data-i18n="tech.tool">PROFESSIONAL TOOL</span><h3>TerraMow V1000</h3><p data-i18n="tech.m3">An autonomous mowing option suited to regular ongoing maintenance where consistent robotic mowing is appropriate.</p></div></article>
+        <article class="technology-card"><div class="machine-image"><img src="assets/assets-mowrator-2wd.webp" alt="Mowrator 2WD robotic mower" /></div><div class="machine-copy"><span data-i18n="tech.tool">ROBOTIC TOOL</span><em data-i18n="tech.use1">Regular lawns</em><h3>Mowrator 2WD</h3><p data-i18n="tech.m1">A controlled robotic mowing option for residential lawns, regular terrain and areas where precise operator control is useful.</p></div></article>
+        <article class="technology-card"><div class="machine-image"><img src="assets/assets-mowrator-4wd.webp" alt="Mowrator 4WD robotic mower" /></div><div class="machine-copy"><span data-i18n="tech.tool">ROBOTIC TOOL</span><em data-i18n="tech.use2">Challenging terrain</em><h3>Mowrator 4WD</h3><p data-i18n="tech.m2">A more capable platform for challenging terrain, larger lawns and sites requiring additional traction and control.</p></div></article>
+        <article class="technology-card"><div class="machine-image"><img src="assets/assets-terramow-v1000.webp" alt="TerraMow V1000 autonomous robotic mower" /></div><div class="machine-copy"><span data-i18n="tech.tool">ROBOTIC TOOL</span><em data-i18n="tech.use3">Autonomous maintenance</em><h3>TerraMow V1000</h3><p data-i18n="tech.m3">An autonomous mowing option suited to regular ongoing maintenance where consistent robotic mowing is appropriate.</p></div></article>
       </div>
       <p class="technology-note" data-i18n="tech.note">Equipment shown represents tools available within our lawn-care approach. RoboGardener assesses each property before recommending a service method.</p>
     </section>
@@ -102,18 +103,22 @@
     <section class="section services" id="services">
       <div class="section-heading compact"><span class="eyebrow green" data-i18n="services.eyebrow">OUR SERVICES</span><h2 data-i18n="services.title">Smart care for a healthier, better-looking lawn.</h2></div>
       <div class="service-grid">
-        <article><div class="icon">🤖</div><h3 data-i18n="services.s1t">Robotic Lawn Mowing</h3><p data-i18n="services.s1d">Automatic, efficient and precise mowing using professional robotic technology.</p></article>
-        <article><div class="icon">📅</div><h3 data-i18n="services.s2t">Regular Lawn Maintenance</h3><p data-i18n="services.s2d">Scheduled mowing and lawn care to keep presentation consistent throughout the season.</p></article>
-        <article><div class="icon">✂️</div><h3 data-i18n="services.s3t">Edge Trimming & Detail Work</h3><p data-i18n="services.s3d">Professional finishing around paths, fences, borders and areas robots cannot reach.</p></article>
-        <article><div class="icon">🌱</div><h3 data-i18n="services.s4t">Lawn Health Management</h3><p data-i18n="services.s4d">Practical care recommendations focused on lawn health, appearance and ongoing improvement.</p></article>
-        <article><div class="icon">🧭</div><h3 data-i18n="services.s5t">Custom Lawn Care Plans</h3><p data-i18n="services.s5d">Tailored service plans based on lawn area, grass condition, mowing frequency and property needs.</p></article>
-        <article><div class="icon">🏢</div><h3 data-i18n="services.s6t">Commercial Grounds Care</h3><p data-i18n="services.s6d">Robot-assisted lawn care for selected commercial, strata and facility sites.</p></article>
+        <article><div class="icon service-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="5" y="7" width="14" height="10" rx="3"/><path d="M8 7V5h8v2M9 17v2m6-2v2M9 11h.01M15 11h.01M9 14h6"/></svg></div><h3 data-i18n="services.s1t">Robotic Lawn Mowing</h3><p data-i18n="services.s1d">Automatic, efficient and precise mowing using professional robotic technology.</p></article>
+        <article><div class="icon service-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M8 3v4m8-4v4M4 9h16M8 13h3m2 0h3m-8 4h3"/></svg></div><h3 data-i18n="services.s2t">Regular Lawn Maintenance</h3><p data-i18n="services.s2d">Scheduled mowing and lawn care to keep presentation consistent throughout the season.</p></article>
+        <article><div class="icon service-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 19c4-6 8-9 16-14M7 8l3 3M14 14l3 3"/><circle cx="6" cy="6" r="2"/><circle cx="18" cy="18" r="2"/></svg></div><h3 data-i18n="services.s3t">Edge Trimming & Detail Work</h3><p data-i18n="services.s3d">Professional finishing around paths, fences, borders and areas robots cannot reach.</p></article>
+        <article><div class="icon service-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 21V10m0 2c-4 0-7-2-7-6 4 0 7 2 7 6Zm0 2c4 0 7-2 7-6-4 0-7 2-7 6Z"/></svg></div><h3 data-i18n="services.s4t">Lawn Health Management</h3><p data-i18n="services.s4d">Practical care recommendations focused on lawn health, appearance and ongoing improvement.</p></article>
+        <article><div class="icon service-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 2M4 12h2m12 0h2M12 4v2m0 12v2"/></svg></div><h3 data-i18n="services.s5t">Custom Lawn Care Plans</h3><p data-i18n="services.s5d">Tailored service plans based on lawn area, grass condition, mowing frequency and property needs.</p></article>
+        <article><div class="icon service-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 20V8l8-4 8 4v12M8 20v-6h8v6M9 9h.01M15 9h.01"/></svg></div><h3 data-i18n="services.s6t">Commercial Grounds Care</h3><p data-i18n="services.s6d">Robot-assisted lawn care for selected commercial, strata and facility sites.</p></article>
       </div>
     </section>
 
     <section class="section founder">
       <div class="founder-image"><img src="assets/dr-gardener-ip.png" alt="Dr Bill RoboGardener" /></div>
-      <div class="founder-copy"><span class="eyebrow green" data-i18n="founder.eyebrow">FOUNDER-LED LAWN CARE</span><h2 data-i18n="founder.title">Expert judgement behind smarter lawn care.</h2><p data-i18n="founder.p1">RoboGardener is built around a simple principle: technology works best when it is matched to the lawn. Dr Bill considers lawn condition, terrain, access and maintenance needs before selecting the right robotic and professional-care approach.</p><div class="founder-facts"><span data-i18n="founder.f1">Site-specific assessment</span><span data-i18n="founder.f2">Robot + professional finishing</span><span data-i18n="founder.f3">Melbourne-based service</span></div></div>
+      <div class="founder-copy"><span class="eyebrow green" data-i18n="founder.eyebrow">FOUNDER-LED LAWN CARE</span><h2 data-i18n="founder.title">Expert judgement behind smarter lawn care.</h2><p data-i18n="founder.p1">RoboGardener is built around a simple principle: technology works best when it is matched to the lawn. Dr Bill considers lawn condition, terrain, access and maintenance needs before selecting the right robotic and professional-care approach.</p><div class="founder-facts">
+          <span data-i18n="founder.f1">PhD in Horticulture</span>
+          <span data-i18n="founder.f2">18 years lawn-care experience</span>
+          <span data-i18n="founder.f3">Melbourne-based service</span>
+        </div></div>
     </section>
 
     <section class="section quote-section" id="quote">
@@ -140,7 +145,40 @@
     <section class="section areas" id="areas"><div class="section-heading compact"><span class="eyebrow green" data-i18n="areas.eyebrow">SERVICE AREA</span><h2 data-i18n="areas.title">Servicing Melbourne & surrounding areas</h2><p data-i18n="areas.desc">Send us your postcode, lawn area and current grass height. We’ll confirm availability and prepare a suitable quote.</p></div><a href="#quote" class="btn btn-dark" data-i18n="areas.cta">Check My Area</a></section>
   </main>
 
-  <footer><div class="footer-brand"><img src="assets/dr-gardener-cutout.png" alt="RoboGardener" /><p data-i18n="footer.tagline">Smart Lawn Care. A Greener Tomorrow.</p></div><div><h4 data-i18n="footer.contact">Contact</h4><p>Dr Bill</p><a href="tel:0408816502">0408 816 502</a><a href="mailto:enquiries@robogardener.com.au">enquiries@robogardener.com.au</a></div><div><h4 data-i18n="footer.service">Service</h4><p data-i18n="footer.melbourne">Melbourne, Victoria</p><a href="#quote" data-i18n="footer.quote">Get a Free Quote</a></div></footer>
+  <footer class="site-footer">
+    <div class="footer-main">
+      <div class="footer-brand">
+        <div class="footer-brand-mark"><img src="assets/dr-gardener-cutout.png" alt="RoboGardener" /></div>
+        <p data-i18n="footer.tagline">Smart Lawn Care. A Greener Tomorrow.</p>
+        <a class="footer-phone" href="tel:0408816502">0408 816 502</a>
+        <a href="mailto:enquiries@robogardener.com.au">enquiries@robogardener.com.au</a>
+      </div>
+      <div class="footer-column">
+        <h4 data-i18n="footer.services">Services</h4>
+        <a href="#services" data-i18n="services.s1t">Robotic Lawn Mowing</a>
+        <a href="#services" data-i18n="services.s2t">Regular Lawn Maintenance</a>
+        <a href="#services" data-i18n="services.s4t">Lawn Health Management</a>
+        <a href="#commercial" data-i18n="market.com.title">Commercial</a>
+      </div>
+      <div class="footer-column">
+        <h4 data-i18n="footer.about">RoboGardener</h4>
+        <a href="#why" data-i18n="nav.why">Why RoboGardener</a>
+        <a href="#technology" data-i18n="nav.technology">Robotic Mowing</a>
+        <a href="#areas" data-i18n="nav.areas">Service Areas</a>
+        <a href="#quote" data-i18n="footer.quote">Get a Free Quote</a>
+      </div>
+      <div class="footer-cta">
+        <span class="eyebrow" data-i18n="footer.ctaEyebrow">MELBOURNE LAWN CARE</span>
+        <h3 data-i18n="footer.ctaTitle">Ready for a smarter lawn?</h3>
+        <p data-i18n="footer.melbourne">Melbourne, Victoria</p>
+        <a class="btn btn-light" href="#quote" data-i18n="nav.cta">Get a Free Quote</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 RoboGardener. <span data-i18n="footer.rights">All rights reserved.</span></span>
+      <span data-i18n="footer.bottomTagline">Smart care. Better lawns. A greener tomorrow.</span>
+    </div>
+  </footer>
   <script src="script.js"></script><script src="integration.js"></script>
 </body>
 </html>
