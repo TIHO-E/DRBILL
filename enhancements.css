@@ -467,3 +467,74 @@ body{font-feature-settings:"kern" 1,"liga" 1}
   .quote-background-copy{left:24px;right:24px;bottom:26px}
   .quote-background h3{font-size:38px}
 }
+
+/* ===== Quote section: Background-Quote.png behind the form ===== */
+.quote-section{
+  position:relative;
+  min-height:760px;
+  padding:72px 7vw;
+  overflow:hidden;
+  background:
+    linear-gradient(90deg,rgba(4,55,34,.88) 0%,rgba(4,65,39,.76) 44%,rgba(4,65,39,.38) 72%,rgba(4,65,39,.16) 100%),
+    url("assets/Background-Quote.png") center center/cover no-repeat !important;
+}
+.quote-section:before,
+.quote-section:after{
+  display:none!important;
+  content:none!important;
+}
+.quote-split,
+.quote-background{
+  display:none!important;
+}
+.quote-section .quote-panel{
+  position:relative;
+  z-index:2;
+  width:min(760px,62vw);
+  max-width:760px;
+  margin:0;
+}
+.quote-brand-line{
+  position:absolute;
+  z-index:2;
+  right:6vw;
+  top:50%;
+  transform:translateY(-50%);
+  width:min(420px,30vw);
+}
+.quote-brand-line h3{
+  margin:0;
+  color:#fff;
+  font-family:"DM Serif Display",serif;
+  font-size:clamp(40px,3.6vw,58px);
+  line-height:1.02;
+  font-weight:400;
+  text-shadow:0 3px 18px rgba(0,0,0,.28);
+}
+@media(max-width:1180px){
+  .quote-section{
+    min-height:auto;
+    padding:64px 5vw;
+    background-position:center center!important;
+  }
+  .quote-section .quote-panel{
+    width:min(760px,100%);
+    margin:0 auto;
+  }
+  .quote-brand-line{
+    position:static;
+    transform:none;
+    width:min(760px,100%);
+    margin:28px auto 0;
+  }
+  .quote-brand-line h3{
+    font-size:42px;
+    text-align:center;
+  }
+}
+@media(max-width:720px){
+  .quote-section{padding:52px 18px;background-position:62% center!important}
+  .quote-section .quote-panel{width:100%}
+  .quote-brand-line{margin-top:22px}
+  .quote-brand-line h3{font-size:34px}
+}
