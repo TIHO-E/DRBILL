@@ -597,3 +597,45 @@ html[lang^="zh"] .quote-cn-message::after{
     margin-top:18px;
   }
 }
+
+/* ===== Quote bilingual brand message + Dr. Bill naming pass ===== */
+.quote-message{
+  position:absolute;
+  z-index:3;
+  right:6vw;
+  top:102px;
+  width:min(430px,31vw);
+  margin:0;
+  color:#f4f7f0;
+  font-family:"DM Serif Display","PingFang SC","Microsoft YaHei",serif;
+  font-size:clamp(38px,3.2vw,52px);
+  line-height:1.05;
+  font-weight:400;
+  letter-spacing:.005em;
+  text-shadow:0 3px 20px rgba(0,0,0,.25);
+}
+.quote-message::after{
+  content:"";
+  display:block;
+  width:72px;
+  height:2px;
+  margin-top:18px;
+  background:linear-gradient(90deg,#c9e89e,rgba(201,232,158,.12));
+}
+html[lang^="zh"] .quote-message{
+  color:#f2f6ed;
+  letter-spacing:.04em;
+}
+@media(max-width:1180px){
+  .quote-message{
+    position:static;
+    width:min(760px,100%);
+    margin:0 auto 26px;
+    text-align:center;
+    font-size:42px;
+  }
+  .quote-message::after{margin-left:auto;margin-right:auto}
+}
+@media(max-width:720px){
+  .quote-message{font-size:32px;margin-bottom:20px}
+}
