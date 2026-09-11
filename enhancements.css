@@ -262,3 +262,40 @@ footer .footer-brand img{
 @media(max-width:980px){
   .services-title{white-space:normal}
 }
+
+/* Requested single-line supporting copy */
+@media(min-width:1181px){
+  .technology .section-heading p,
+  .why .section-heading p,
+  .areas .section-heading p{
+    max-width:none;
+    width:100%;
+    white-space:nowrap;
+  }
+}
+
+/* If the translated market title is empty, hide the empty heading cleanly */
+html[lang^="zh"] .market-title:empty{display:none}
+
+/* Footer logo: transparent artwork only, no backing panel */
+.site-footer .footer-brand-mark{
+  width:280px;
+  padding:0!important;
+  margin:0 0 18px;
+  background:transparent!important;
+  border:0!important;
+  border-radius:0!important;
+  box-shadow:none!important;
+  overflow:visible!important;
+}
+.site-footer .footer-brand-mark img{
+  width:100%;
+  height:auto;
+  padding:0!important;
+  background:transparent!important;
+  border:0!important;
+  border-radius:0!important;
+  box-shadow:none!important;
+  object-fit:contain;
+  mix-blend-mode:normal;
+}
