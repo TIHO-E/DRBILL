@@ -553,3 +553,47 @@ body{font-feature-settings:"kern" 1,"liga" 1}
     text-align:center!important;
   }
 }
+
+/* ===== Chinese localisation + quote message ===== */
+.quote-cn-message{
+  display:none;
+}
+html[lang^="zh"] .quote-cn-message{
+  display:block;
+  position:absolute;
+  z-index:3;
+  right:6vw;
+  top:112px;
+  width:min(420px,30vw);
+  color:#f3f7ef;
+  font-family:"DM Serif Display","PingFang SC","Microsoft YaHei",serif;
+  font-size:clamp(36px,3.15vw,50px);
+  line-height:1.08;
+  font-weight:400;
+  letter-spacing:.01em;
+  text-shadow:0 2px 18px rgba(0,0,0,.24);
+}
+html[lang^="zh"] .quote-cn-message::after{
+  content:"";
+  display:block;
+  width:64px;
+  height:2px;
+  margin-top:18px;
+  background:linear-gradient(90deg,#c7e7a0,rgba(199,231,160,.18));
+}
+@media(max-width:1180px){
+  html[lang^="zh"] .quote-cn-message{
+    position:static;
+    width:min(760px,100%);
+    margin:24px auto 0;
+    text-align:center;
+    font-size:40px;
+  }
+  html[lang^="zh"] .quote-cn-message::after{margin-left:auto;margin-right:auto}
+}
+@media(max-width:720px){
+  html[lang^="zh"] .quote-cn-message{
+    font-size:32px;
+    margin-top:18px;
+  }
+}
