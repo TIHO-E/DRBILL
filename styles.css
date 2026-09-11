@@ -384,9 +384,7 @@ body{font-feature-settings:"kern" 1,"liga" 1}
   min-height:760px;
   padding:72px 7vw;
   overflow:hidden;
-  background:
-    linear-gradient(90deg,rgba(4,55,34,.88) 0%,rgba(4,65,39,.76) 44%,rgba(4,65,39,.38) 72%,rgba(4,65,39,.16) 100%),
-    url("assets/Background-Quote.png") center center/cover no-repeat;
+  background:#075a36;
 }
 .quote-section:before,.quote-section:after{display:none;content:none}
 .quote-section .quote-panel{
@@ -475,7 +473,7 @@ img{height:auto}
 /* ===== Quote final alignment / artwork correction ===== */
 .quote-section{
   background-color:#075a36;
-  background-image:url("assets/Background-Quote.png");
+  background-image:none;
   background-position:center center;
   background-size:cover;
   background-repeat:no-repeat;
@@ -497,4 +495,10 @@ img{height:auto}
 }
 @media(max-width:1180px){
   .quote-message{transform:none}
+}
+
+/* Quote artwork removed: intentional solid brand background */
+.quote-section{
+  background-color:#075a36;
+  background-image:none;
 }
