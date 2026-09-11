@@ -639,3 +639,6 @@ html[lang^="zh"] .quote-message{
 @media(max-width:720px){
   .quote-message{font-size:32px;margin-bottom:20px}
 }
+
+/* Quote brand headline: intentional two-line lockup */
+.quote-message br{display:block}
