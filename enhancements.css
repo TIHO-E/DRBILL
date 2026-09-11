@@ -538,3 +538,18 @@ body{font-feature-settings:"kern" 1,"liga" 1}
   .quote-brand-line{margin-top:22px}
   .quote-brand-line h3{font-size:34px}
 }
+
+/* Final Quote + technology alignment adjustments */
+.quote-brand-line{display:none!important}
+.technology .section-heading p{
+  margin-left:auto!important;
+  margin-right:auto!important;
+  text-align:center!important;
+}
+@media(min-width:1181px){
+  .technology .section-heading p{
+    width:100%!important;
+    max-width:1180px!important;
+    text-align:center!important;
+  }
+}
