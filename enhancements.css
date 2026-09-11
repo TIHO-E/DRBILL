@@ -219,3 +219,25 @@ footer .footer-brand img{
   .nav-open .main-nav{opacity:1;transform:translateY(0);pointer-events:auto}
   body.nav-open{overflow:hidden}
 }
+
+/* Requested market headline treatment */
+.market-heading{
+  display:block;
+  text-align:center;
+}
+.market-heading .eyebrow{
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+}
+.market-title{
+  width:100%;
+  max-width:none;
+  margin-left:auto;
+  margin-right:auto;
+  text-align:center;
+  white-space:nowrap;
+}
+@media(max-width:980px){
+  .market-title{white-space:normal}
+}
