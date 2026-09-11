@@ -321,3 +321,12 @@ body{font-feature-settings:"kern" 1,"liga" 1}
   .areas-proof{display:grid;grid-template-columns:1fr}
   .areas-proof span{width:max-content;max-width:100%}
 }
+
+/* Restore original quote section — no oversized mower showcase */
+.quote-layout{display:block!important;max-width:none!important;margin:0!important}
+.quote-showcase{display:none!important}
+.quote-section{padding-left:7vw;padding-right:7vw}
+.quote-panel{max-width:900px;margin:0 auto}
+@media(max-width:720px){
+  .quote-section{padding-left:18px;padding-right:18px}
+}
