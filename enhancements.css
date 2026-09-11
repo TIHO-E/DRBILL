@@ -407,3 +407,63 @@ body{font-feature-settings:"kern" 1,"liga" 1}
   .footer-main{max-width:1180px;padding-top:50px;padding-bottom:40px}
   .footer-brand-mark{width:220px}.footer-cta{padding:22px}.footer-cta h3{font-size:27px}
 }
+
+/* ===== Approved Quote split: form left / Background-Quote.png right ===== */
+.quote-section{
+  min-height:0;
+  padding:72px 6vw;
+  background:linear-gradient(112deg,#075331 0%,#075f38 100%);
+}
+.quote-section:before,.quote-section:after{display:none!important;content:none!important}
+.quote-split{
+  position:relative;
+  z-index:1;
+  width:min(1240px,100%);
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:minmax(0,1.08fr) minmax(360px,.92fr);
+  gap:30px;
+  align-items:stretch;
+}
+.quote-split .quote-panel{
+  width:100%;
+  max-width:none;
+  margin:0;
+}
+.quote-background{
+  position:relative;
+  min-height:100%;
+  overflow:hidden;
+  border-radius:20px;
+  background:
+    linear-gradient(180deg,rgba(5,49,30,.05) 25%,rgba(5,49,30,.58) 100%),
+    url("assets/Background-Quote.png") center center/cover no-repeat;
+  box-shadow:0 20px 44px rgba(4,38,24,.18);
+}
+.quote-background-copy{
+  position:absolute;
+  left:36px;
+  right:36px;
+  bottom:38px;
+}
+.quote-background h3{
+  max-width:470px;
+  margin:0;
+  color:#fff;
+  font-family:"DM Serif Display",serif;
+  font-size:clamp(38px,3.6vw,54px);
+  line-height:1.02;
+  font-weight:400;
+  text-shadow:0 3px 18px rgba(0,0,0,.28);
+}
+@media(max-width:1180px){
+  .quote-split{grid-template-columns:1fr}
+  .quote-background{min-height:480px}
+}
+@media(max-width:720px){
+  .quote-section{padding:54px 18px}
+  .quote-split{gap:18px}
+  .quote-background{min-height:390px;border-radius:18px}
+  .quote-background-copy{left:24px;right:24px;bottom:26px}
+  .quote-background h3{font-size:38px}
+}
